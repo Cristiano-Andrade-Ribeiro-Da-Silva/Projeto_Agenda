@@ -94,11 +94,12 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex
 
             //Fechando a conexão com o banco de dados
             conexao.Close();
-            
+
             MessageBox.Show("Cadastro Efetuado com sucesso! \n Você já pode Efetuar o Login");
 
             this.Close();
         }
+
 
         private void textBox_nome_TextChanged(object sender, EventArgs e)
         {
