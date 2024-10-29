@@ -99,15 +99,5 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap cadeado_trancado_2 {
-            get {
-                object obj = ResourceManager.GetObject("cadeado_trancado-2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }
