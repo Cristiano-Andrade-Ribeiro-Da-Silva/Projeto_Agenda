@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Controller;
 using Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Data;
 using System;
 using System.Collections.Generic;
@@ -74,30 +75,28 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex
 
         private void botao_cadastrar_final_Click(object sender, EventArgs e)
         {
-            MySqlConnection conexao = ConexãoDB.criador_conexao();
-            //Abrindo conexão
-            conexao.Open();
+            //Pegando os dados do formulário
+            string nome = textBox_nome.Text;
+            string usuario = textBox_usuario.Text;
+            string telefone = textBox_telefone.Text;
+            string senha = textBox_senha.Text;
 
-            //Criando comando SQL para inserir o Usuário
-            string sql = $"INSERT INTO tb_usuarios (nome, usuario, telefone, senha) VALUES (@nome, @usuario, @telefone, @senha)";
+            //Instanciando o objeto "UsuarioController"
+            UsuarioController ControleUsuario = new UsuarioController();
 
-            //Criando o comando
-            MySqlCommand comando = new MySqlCommand(sql, conexao);
+            //Inserindo o usuário
+            bool resultado = ControleUsuario.AddUsuario(nome, usuario, telefone, senha);
 
-            comando.Parameters.AddWithValue("@nome", textBox_nome.Text);
-            comando.Parameters.AddWithValue("@usuario", textBox_usuario.Text);
-            comando.Parameters.AddWithValue("@telefone", textBox_telefone.Text);
-            comando.Parameters.AddWithValue("@senha", textBox_senha.Text);
+            //
+            if (resultado == true)
+            {
+                MessageBox.Show("Cadastrado com Sucesso");
+            }
 
-            // Executando o comando, "ExecuteNonQuery();" executa o comando mas não mostra ou retorna nada
-            comando.ExecuteNonQuery();
-
-            //Fechando a conexão com o banco de dados
-            conexao.Close();
-
-            MessageBox.Show("Cadastro Efetuado com sucesso! \n Você já pode Efetuar o Login");
-
-            this.Close();
+            else
+            {
+                MessageBox.Show("Falha no Cadastro");
+            }
         }
 
 
