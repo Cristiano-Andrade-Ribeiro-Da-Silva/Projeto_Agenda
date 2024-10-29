@@ -94,7 +94,7 @@
             botao_cadastrar_final.FlatStyle = FlatStyle.Flat;
             botao_cadastrar_final.Font = new Font("Arial", 9.75F, FontStyle.Bold | FontStyle.Italic);
             botao_cadastrar_final.ForeColor = Color.White;
-            botao_cadastrar_final.Location = new Point(43, 434);
+            botao_cadastrar_final.Location = new Point(20, 450);
             botao_cadastrar_final.Name = "botao_cadastrar_final";
             botao_cadastrar_final.Size = new Size(106, 37);
             botao_cadastrar_final.TabIndex = 15;
@@ -108,7 +108,7 @@
             botao_cancelar.FlatStyle = FlatStyle.Flat;
             botao_cancelar.Font = new Font("Arial", 9.75F, FontStyle.Bold | FontStyle.Italic);
             botao_cancelar.ForeColor = Color.White;
-            botao_cancelar.Location = new Point(237, 434);
+            botao_cancelar.Location = new Point(280, 450);
             botao_cancelar.Name = "botao_cancelar";
             botao_cancelar.Size = new Size(106, 37);
             botao_cancelar.TabIndex = 14;
@@ -168,7 +168,7 @@
             // cadeado_trancado
             // 
             cadeado_trancado.Image = Properties.Resources.cadeado_2_trancado;
-            cadeado_trancado.Location = new Point(143, 328);
+            cadeado_trancado.Location = new Point(150, 330);
             cadeado_trancado.Name = "cadeado_trancado";
             cadeado_trancado.Size = new Size(100, 100);
             cadeado_trancado.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -178,7 +178,7 @@
             // cadeado_destrancado
             // 
             cadeado_destrancado.Image = Properties.Resources.cadeado_2_destrancado;
-            cadeado_destrancado.Location = new Point(143, 328);
+            cadeado_destrancado.Location = new Point(150, 330);
             cadeado_destrancado.Name = "cadeado_destrancado";
             cadeado_destrancado.Size = new Size(100, 100);
             cadeado_destrancado.SizeMode = PictureBoxSizeMode.StretchImage;

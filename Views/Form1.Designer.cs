@@ -47,7 +47,7 @@
             botao_login.FlatStyle = FlatStyle.Flat;
             botao_login.Font = new Font("Arial", 9.75F, FontStyle.Bold | FontStyle.Italic);
             botao_login.ForeColor = Color.White;
-            botao_login.Location = new Point(49, 225);
+            botao_login.Location = new Point(20, 450);
             botao_login.Name = "botao_login";
             botao_login.Size = new Size(106, 37);
             botao_login.TabIndex = 0;
@@ -60,7 +60,7 @@
             botao_cadastrar.FlatStyle = FlatStyle.Flat;
             botao_cadastrar.Font = new Font("Arial", 9.75F, FontStyle.Bold | FontStyle.Italic);
             botao_cadastrar.ForeColor = Color.White;
-            botao_cadastrar.Location = new Point(241, 225);
+            botao_cadastrar.Location = new Point(280, 450);
             botao_cadastrar.Name = "botao_cadastrar";
             botao_cadastrar.Size = new Size(106, 37);
             botao_cadastrar.TabIndex = 1;
@@ -120,7 +120,7 @@
             // cadeado_trancado
             // 
             cadeado_trancado.Image = Properties.Resources.cadeado_trancado;
-            cadeado_trancado.Location = new Point(100, 300);
+            cadeado_trancado.Location = new Point(100, 220);
             cadeado_trancado.Name = "cadeado_trancado";
             cadeado_trancado.Size = new Size(200, 200);
             cadeado_trancado.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -130,7 +130,7 @@
             // cadeado_destrancado
             // 
             cadeado_destrancado.Image = Properties.Resources.cadeado_destrancado;
-            cadeado_destrancado.Location = new Point(100, 300);
+            cadeado_destrancado.Location = new Point(100, 220);
             cadeado_destrancado.Name = "cadeado_destrancado";
             cadeado_destrancado.Size = new Size(200, 200);
             cadeado_destrancado.SizeMode = PictureBoxSizeMode.StretchImage;
