@@ -44,10 +44,5 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex
         {
             abilitar_login_botao();
         }
-
-        private void cadeado_destrancado_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

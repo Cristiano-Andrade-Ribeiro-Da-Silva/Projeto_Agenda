@@ -74,7 +74,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Arial", 9.75F, FontStyle.Bold | FontStyle.Italic);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(49, 36);
+            label1.Location = new Point(49, 38);
             label1.Name = "label1";
             label1.Size = new Size(54, 16);
             label1.TabIndex = 2;
@@ -86,7 +86,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Arial", 9.75F, FontStyle.Bold | FontStyle.Italic);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(49, 139);
+            label2.Location = new Point(49, 141);
             label2.Name = "label2";
             label2.Size = new Size(46, 16);
             label2.TabIndex = 5;
