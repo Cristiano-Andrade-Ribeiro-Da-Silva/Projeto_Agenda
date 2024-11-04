@@ -83,9 +83,9 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cadeado_destrancado {
+        internal static System.Drawing.Bitmap Certo_01 {
             get {
-                object obj = ResourceManager.GetObject("cadeado_destrancado", resourceCulture);
+                object obj = ResourceManager.GetObject("Certo-01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cadeado_trancado {
+        internal static System.Drawing.Bitmap Errado_01 {
             get {
-                object obj = ResourceManager.GetObject("cadeado_trancado", resourceCulture);
+                object obj = ResourceManager.GetObject("Errado-01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

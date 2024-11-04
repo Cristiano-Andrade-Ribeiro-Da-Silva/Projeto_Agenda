@@ -14,15 +14,15 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex
             if (textBox_usuario.Text != "" && textBox_senha.Text.Length >= 8)
             {
                 botao_login.Enabled = true;
-                cadeado_trancado.Visible = false;
-                cadeado_destrancado.Visible = true;
+                Fechado.Visible = false;
+                Aberto.Visible = true;
             }
 
             else
             {
                 botao_login.Enabled = false;
-                cadeado_trancado.Visible = true;
-                cadeado_destrancado.Visible = false;
+                Fechado.Visible = true;
+                Aberto.Visible = false;
             }
         }
 

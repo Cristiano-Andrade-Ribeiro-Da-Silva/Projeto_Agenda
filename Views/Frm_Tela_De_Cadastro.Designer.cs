@@ -167,7 +167,7 @@
             // 
             // cadeado_trancado
             // 
-            cadeado_trancado.Image = Properties.Resources.cadeado_2_trancado;
+            cadeado_trancado.Image = Properties.Resources.Errado_01;
             cadeado_trancado.Location = new Point(150, 330);
             cadeado_trancado.Name = "cadeado_trancado";
             cadeado_trancado.Size = new Size(100, 100);
@@ -177,7 +177,7 @@
             // 
             // cadeado_destrancado
             // 
-            cadeado_destrancado.Image = Properties.Resources.cadeado_2_destrancado;
+            cadeado_destrancado.Image = Properties.Resources.Certo_01;
             cadeado_destrancado.Location = new Point(150, 330);
             cadeado_destrancado.Name = "cadeado_destrancado";
             cadeado_destrancado.Size = new Size(100, 100);

@@ -34,10 +34,10 @@
             label2 = new Label();
             textBox_senha = new TextBox();
             textBox_usuario = new TextBox();
-            cadeado_trancado = new PictureBox();
-            cadeado_destrancado = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)cadeado_trancado).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)cadeado_destrancado).BeginInit();
+            Fechado = new PictureBox();
+            Aberto = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)Fechado).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Aberto).BeginInit();
             SuspendLayout();
             // 
             // botao_login
@@ -117,26 +117,26 @@
             textBox_usuario.TextAlign = HorizontalAlignment.Center;
             textBox_usuario.TextChanged += textBox_usuario_TextChanged;
             // 
-            // cadeado_trancado
+            // Fechado
             // 
-            cadeado_trancado.Image = Properties.Resources.cadeado_trancado;
-            cadeado_trancado.Location = new Point(100, 220);
-            cadeado_trancado.Name = "cadeado_trancado";
-            cadeado_trancado.Size = new Size(200, 200);
-            cadeado_trancado.SizeMode = PictureBoxSizeMode.StretchImage;
-            cadeado_trancado.TabIndex = 6;
-            cadeado_trancado.TabStop = false;
+            Fechado.Image = Properties.Resources.Errado_01;
+            Fechado.Location = new Point(100, 220);
+            Fechado.Name = "Fechado";
+            Fechado.Size = new Size(200, 200);
+            Fechado.SizeMode = PictureBoxSizeMode.StretchImage;
+            Fechado.TabIndex = 6;
+            Fechado.TabStop = false;
             // 
-            // cadeado_destrancado
+            // Aberto
             // 
-            cadeado_destrancado.Image = Properties.Resources.cadeado_destrancado;
-            cadeado_destrancado.Location = new Point(100, 220);
-            cadeado_destrancado.Name = "cadeado_destrancado";
-            cadeado_destrancado.Size = new Size(200, 200);
-            cadeado_destrancado.SizeMode = PictureBoxSizeMode.StretchImage;
-            cadeado_destrancado.TabIndex = 7;
-            cadeado_destrancado.TabStop = false;
-            cadeado_destrancado.Visible = false;
+            Aberto.Image = Properties.Resources.Certo_01;
+            Aberto.Location = new Point(100, 220);
+            Aberto.Name = "Aberto";
+            Aberto.Size = new Size(200, 200);
+            Aberto.SizeMode = PictureBoxSizeMode.StretchImage;
+            Aberto.TabIndex = 8;
+            Aberto.TabStop = false;
+            Aberto.Visible = false;
             // 
             // Form1
             // 
@@ -144,8 +144,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.RoyalBlue;
             ClientSize = new Size(400, 500);
-            Controls.Add(cadeado_destrancado);
-            Controls.Add(cadeado_trancado);
+            Controls.Add(Aberto);
+            Controls.Add(Fechado);
             Controls.Add(label2);
             Controls.Add(textBox_senha);
             Controls.Add(textBox_usuario);
@@ -157,8 +157,8 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)cadeado_trancado).EndInit();
-            ((System.ComponentModel.ISupportInitialize)cadeado_destrancado).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Fechado).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Aberto).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -171,7 +171,7 @@
         private Label label2;
         private TextBox textBox_senha;
         private TextBox textBox_usuario;
-        private PictureBox cadeado_trancado;
-        private PictureBox cadeado_destrancado;
+        private PictureBox Fechado;
+        private PictureBox Aberto;
     }
 }
