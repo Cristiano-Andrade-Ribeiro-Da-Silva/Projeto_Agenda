@@ -49,9 +49,9 @@
             lbl_senha.AutoSize = true;
             lbl_senha.Font = new Font("Arial", 9.75F, FontStyle.Bold | FontStyle.Italic);
             lbl_senha.ForeColor = Color.White;
-            lbl_senha.Location = new Point(43, 255);
+            lbl_senha.Location = new Point(49, 340);
             lbl_senha.Name = "lbl_senha";
-            lbl_senha.Size = new Size(46, 16);
+            lbl_senha.Size = new Size(58, 19);
             lbl_senha.TabIndex = 9;
             lbl_senha.Text = "Senha";
             // 
@@ -60,9 +60,9 @@
             lbl_usuario.AutoSize = true;
             lbl_usuario.Font = new Font("Arial", 9.75F, FontStyle.Bold | FontStyle.Italic);
             lbl_usuario.ForeColor = Color.White;
-            lbl_usuario.Location = new Point(43, 88);
+            lbl_usuario.Location = new Point(49, 117);
             lbl_usuario.Name = "lbl_usuario";
-            lbl_usuario.Size = new Size(54, 16);
+            lbl_usuario.Size = new Size(70, 19);
             lbl_usuario.TabIndex = 6;
             lbl_usuario.Text = "Usuário";
             // 
@@ -71,9 +71,9 @@
             lbl_telefone.AutoSize = true;
             lbl_telefone.Font = new Font("Arial", 9.75F, FontStyle.Bold | FontStyle.Italic);
             lbl_telefone.ForeColor = Color.White;
-            lbl_telefone.Location = new Point(43, 171);
+            lbl_telefone.Location = new Point(49, 228);
             lbl_telefone.Name = "lbl_telefone";
-            lbl_telefone.Size = new Size(60, 16);
+            lbl_telefone.Size = new Size(74, 19);
             lbl_telefone.TabIndex = 13;
             lbl_telefone.Text = "Telefone";
             // 
@@ -82,9 +82,9 @@
             lbl_nome.AutoSize = true;
             lbl_nome.Font = new Font("Arial", 9.75F, FontStyle.Bold | FontStyle.Italic);
             lbl_nome.ForeColor = Color.White;
-            lbl_nome.Location = new Point(43, 4);
+            lbl_nome.Location = new Point(49, 5);
             lbl_nome.Name = "lbl_nome";
-            lbl_nome.Size = new Size(43, 16);
+            lbl_nome.Size = new Size(54, 19);
             lbl_nome.TabIndex = 10;
             lbl_nome.Text = "Nome";
             // 
@@ -94,9 +94,10 @@
             botao_cadastrar_final.FlatStyle = FlatStyle.Flat;
             botao_cadastrar_final.Font = new Font("Arial", 9.75F, FontStyle.Bold | FontStyle.Italic);
             botao_cadastrar_final.ForeColor = Color.White;
-            botao_cadastrar_final.Location = new Point(20, 450);
+            botao_cadastrar_final.Location = new Point(23, 600);
+            botao_cadastrar_final.Margin = new Padding(3, 4, 3, 4);
             botao_cadastrar_final.Name = "botao_cadastrar_final";
-            botao_cadastrar_final.Size = new Size(106, 37);
+            botao_cadastrar_final.Size = new Size(121, 49);
             botao_cadastrar_final.TabIndex = 15;
             botao_cadastrar_final.Text = "Cadastrar";
             botao_cadastrar_final.UseVisualStyleBackColor = false;
@@ -108,9 +109,10 @@
             botao_cancelar.FlatStyle = FlatStyle.Flat;
             botao_cancelar.Font = new Font("Arial", 9.75F, FontStyle.Bold | FontStyle.Italic);
             botao_cancelar.ForeColor = Color.White;
-            botao_cancelar.Location = new Point(280, 450);
+            botao_cancelar.Location = new Point(320, 600);
+            botao_cancelar.Margin = new Padding(3, 4, 3, 4);
             botao_cancelar.Name = "botao_cancelar";
-            botao_cancelar.Size = new Size(106, 37);
+            botao_cancelar.Size = new Size(121, 49);
             botao_cancelar.TabIndex = 14;
             botao_cancelar.Text = "Cancelar";
             botao_cancelar.UseVisualStyleBackColor = false;
@@ -121,9 +123,10 @@
             textBox_usuario.BackColor = Color.DarkViolet;
             textBox_usuario.Font = new Font("Arial", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
             textBox_usuario.ForeColor = Color.White;
-            textBox_usuario.Location = new Point(43, 124);
+            textBox_usuario.Location = new Point(49, 165);
+            textBox_usuario.Margin = new Padding(3, 4, 3, 4);
             textBox_usuario.Name = "textBox_usuario";
-            textBox_usuario.Size = new Size(300, 22);
+            textBox_usuario.Size = new Size(342, 26);
             textBox_usuario.TabIndex = 17;
             textBox_usuario.TextAlign = HorizontalAlignment.Center;
             textBox_usuario.TextChanged += textBox_usuario_TextChanged;
@@ -133,9 +136,10 @@
             textBox_nome.BackColor = Color.DarkViolet;
             textBox_nome.Font = new Font("Arial", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
             textBox_nome.ForeColor = Color.White;
-            textBox_nome.Location = new Point(43, 37);
+            textBox_nome.Location = new Point(49, 49);
+            textBox_nome.Margin = new Padding(3, 4, 3, 4);
             textBox_nome.Name = "textBox_nome";
-            textBox_nome.Size = new Size(300, 22);
+            textBox_nome.Size = new Size(342, 26);
             textBox_nome.TabIndex = 16;
             textBox_nome.TextAlign = HorizontalAlignment.Center;
             textBox_nome.TextChanged += textBox_nome_TextChanged;
@@ -145,9 +149,10 @@
             textBox_telefone.BackColor = Color.DarkViolet;
             textBox_telefone.Font = new Font("Arial", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
             textBox_telefone.ForeColor = Color.White;
-            textBox_telefone.Location = new Point(43, 204);
+            textBox_telefone.Location = new Point(49, 272);
+            textBox_telefone.Margin = new Padding(3, 4, 3, 4);
             textBox_telefone.Name = "textBox_telefone";
-            textBox_telefone.Size = new Size(300, 22);
+            textBox_telefone.Size = new Size(342, 26);
             textBox_telefone.TabIndex = 18;
             textBox_telefone.TextAlign = HorizontalAlignment.Center;
             textBox_telefone.TextChanged += textBox_telefone_TextChanged;
@@ -157,10 +162,11 @@
             textBox_senha.BackColor = Color.DarkViolet;
             textBox_senha.Font = new Font("Arial", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
             textBox_senha.ForeColor = Color.White;
-            textBox_senha.Location = new Point(43, 291);
+            textBox_senha.Location = new Point(49, 388);
+            textBox_senha.Margin = new Padding(3, 4, 3, 4);
             textBox_senha.Name = "textBox_senha";
             textBox_senha.PasswordChar = '☢';
-            textBox_senha.Size = new Size(300, 22);
+            textBox_senha.Size = new Size(342, 26);
             textBox_senha.TabIndex = 19;
             textBox_senha.TextAlign = HorizontalAlignment.Center;
             textBox_senha.TextChanged += textBox_senha_TextChanged;
@@ -168,9 +174,10 @@
             // cadeado_trancado
             // 
             cadeado_trancado.Image = Properties.Resources.Errado_01;
-            cadeado_trancado.Location = new Point(150, 330);
+            cadeado_trancado.Location = new Point(171, 440);
+            cadeado_trancado.Margin = new Padding(3, 4, 3, 4);
             cadeado_trancado.Name = "cadeado_trancado";
-            cadeado_trancado.Size = new Size(100, 100);
+            cadeado_trancado.Size = new Size(114, 133);
             cadeado_trancado.SizeMode = PictureBoxSizeMode.StretchImage;
             cadeado_trancado.TabIndex = 20;
             cadeado_trancado.TabStop = false;
@@ -178,9 +185,10 @@
             // cadeado_destrancado
             // 
             cadeado_destrancado.Image = Properties.Resources.Certo_01;
-            cadeado_destrancado.Location = new Point(150, 330);
+            cadeado_destrancado.Location = new Point(171, 440);
+            cadeado_destrancado.Margin = new Padding(3, 4, 3, 4);
             cadeado_destrancado.Name = "cadeado_destrancado";
-            cadeado_destrancado.Size = new Size(100, 100);
+            cadeado_destrancado.Size = new Size(114, 133);
             cadeado_destrancado.SizeMode = PictureBoxSizeMode.StretchImage;
             cadeado_destrancado.TabIndex = 21;
             cadeado_destrancado.TabStop = false;
@@ -188,10 +196,10 @@
             // 
             // Frm_Tela_De_Cadastro
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Indigo;
-            ClientSize = new Size(400, 500);
+            ClientSize = new Size(457, 667);
             Controls.Add(cadeado_destrancado);
             Controls.Add(cadeado_trancado);
             Controls.Add(textBox_senha);
@@ -205,6 +213,7 @@
             Controls.Add(lbl_senha);
             Controls.Add(lbl_usuario);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Frm_Tela_De_Cadastro";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Frm_Tela_De_Cadastro";

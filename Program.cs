@@ -17,7 +17,6 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex
 
             //Se adcionar um "//" de comentário em um formulário aqui, apenas o formulário não comentado irá executar.
 
-            //Application.Run(new Frm_Test());
         }
     }
 }

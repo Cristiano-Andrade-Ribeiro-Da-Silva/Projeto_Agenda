@@ -1,3 +1,6 @@
+using Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Controller;
+using Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Views;
+
 namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex
 {
     public partial class Form1 : Form
@@ -43,6 +46,15 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex
         private void textBox_senha_TextChanged(object sender, EventArgs e)
         {
             abilitar_login_botao();
+        }
+
+        private void botao_login_Click(object sender, EventArgs e)
+        {
+            UsuarioController controle_usuario = new UsuarioController();
+
+            bool resultado = controle_usuario.ValidarLogin("22", "22222222");
+
+            MessageBox.Show(resultado.ToString());
         }
     }
 }
