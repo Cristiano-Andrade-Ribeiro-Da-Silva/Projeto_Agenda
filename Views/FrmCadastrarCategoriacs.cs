@@ -16,6 +16,9 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Views
         public FrmCadastrarCategoriacs()
         {
             InitializeComponent();
+            CategoriaController controleCategoria = new CategoriaController();
+            DataTable tabela = controleCategoria.GetCategorias();
+            dgv_Categoria.DataSource = tabela;
         }
 
         private void btn_cadastrar_categoria_Click(object sender, EventArgs e)
@@ -32,18 +35,15 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Views
             {
                 MessageBox.Show("Cadastrado com Sucesso");
             }
+
+            CategoriaController controleCategoria = new CategoriaController();
+            DataTable tabela = controleCategoria.GetCategorias();
+            dgv_Categoria.DataSource = tabela;
         }
 
         private void btn_Voltar_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btn_dgv_Click(object sender, EventArgs e)
-        {
-            CategoriaController controleCategoria = new CategoriaController();
-            DataTable tabela = controleCategoria.GetCategorias();
-            dgv_Categoria.DataSource = tabela;
         }
     }
 }

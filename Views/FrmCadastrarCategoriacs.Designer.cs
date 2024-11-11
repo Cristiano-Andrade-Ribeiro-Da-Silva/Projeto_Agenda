@@ -33,7 +33,6 @@
             groupBox_nova_categoria = new GroupBox();
             btn_Voltar = new Button();
             dgv_Categoria = new DataGridView();
-            btn_dgv = new Button();
             groupBox_nova_categoria.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgv_Categoria).BeginInit();
             SuspendLayout();
@@ -86,22 +85,11 @@
             dgv_Categoria.Size = new Size(240, 150);
             dgv_Categoria.TabIndex = 5;
             // 
-            // btn_dgv
-            // 
-            btn_dgv.Location = new Point(485, 21);
-            btn_dgv.Name = "btn_dgv";
-            btn_dgv.Size = new Size(75, 23);
-            btn_dgv.TabIndex = 6;
-            btn_dgv.Text = "button1";
-            btn_dgv.UseVisualStyleBackColor = true;
-            btn_dgv.Click += btn_dgv_Click;
-            // 
             // FrmCadastrarCategoriacs
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(700, 300);
-            Controls.Add(btn_dgv);
             Controls.Add(dgv_Categoria);
             Controls.Add(btn_Voltar);
             Controls.Add(groupBox_nova_categoria);
@@ -123,6 +111,5 @@
         private GroupBox groupBox_nova_categoria;
         private Button btn_Voltar;
         private DataGridView dgv_Categoria;
-        private Button btn_dgv;
     }
 }
