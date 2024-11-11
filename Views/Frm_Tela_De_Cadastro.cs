@@ -92,11 +92,6 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex
             {
                 MessageBox.Show("Cadastrado com Sucesso");
             }
-
-            else
-            {
-                MessageBox.Show("Falha no Cadastro");
-            }
         }
 
 

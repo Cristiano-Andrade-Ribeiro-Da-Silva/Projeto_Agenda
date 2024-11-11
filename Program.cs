@@ -1,4 +1,5 @@
 using Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Controller;
+using Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Views;
 
 namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex
 {
@@ -16,7 +17,6 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex
             Application.Run(new Form1());
 
             //Se adcionar um "//" de comentário em um formulário aqui, apenas o formulário não comentado irá executar.
-
         }
     }
 }

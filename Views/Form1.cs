@@ -50,11 +50,29 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex
 
         private void botao_login_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
+            string usuario = textBox_usuario.Text;
+            string senha = textBox_senha.Text;
+
             UsuarioController controle_usuario = new UsuarioController();
 
-            bool resultado = controle_usuario.ValidarLogin("22", "22222222");
+            bool resultado = controle_usuario.ValidarLogin(usuario, senha);
 
-            MessageBox.Show(resultado.ToString());
+            if (resultado == true) 
+            {
+                Frm_tela_principalcs frm_Tela_Principalcs = new Frm_tela_principalcs();
+                frm_Tela_Principalcs.ShowDialog();
+                this.Close();
+                
+                
+            }
+
+            if (resultado == false)
+            {
+                MessageBox.Show("Erro: Usuário ou Senha incorreta");
+                this.Visible = true;
+            }
+
         }
     }
 }

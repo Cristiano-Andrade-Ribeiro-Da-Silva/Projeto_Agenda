@@ -22,5 +22,10 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Views
             FrmCadastrarCategoriacs FrmCadastrarCategoria = new FrmCadastrarCategoriacs();
             FrmCadastrarCategoria.ShowDialog();
         }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
