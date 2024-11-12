@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             groupBox_Tabela = new GroupBox();
-            dgv_Categoria = new DataGridView();
+            dgv_Usuario = new DataGridView();
             btn_excluir_categoria = new Button();
             groupBox_Tabela.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgv_Categoria).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_Usuario).BeginInit();
             SuspendLayout();
             // 
             // groupBox_Tabela
             // 
-            groupBox_Tabela.Controls.Add(dgv_Categoria);
+            groupBox_Tabela.Controls.Add(dgv_Usuario);
             groupBox_Tabela.Controls.Add(btn_excluir_categoria);
-            groupBox_Tabela.Location = new Point(373, 12);
+            groupBox_Tabela.Location = new Point(27, 23);
             groupBox_Tabela.Name = "groupBox_Tabela";
-            groupBox_Tabela.Size = new Size(240, 272);
+            groupBox_Tabela.Size = new Size(313, 272);
             groupBox_Tabela.TabIndex = 7;
             groupBox_Tabela.TabStop = false;
             groupBox_Tabela.Text = "Usuários";
             // 
-            // dgv_Categoria
+            // dgv_Usuario
             // 
-            dgv_Categoria.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv_Categoria.Location = new Point(19, 22);
-            dgv_Categoria.Name = "dgv_Categoria";
-            dgv_Categoria.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgv_Categoria.Size = new Size(200, 200);
-            dgv_Categoria.TabIndex = 5;
+            dgv_Usuario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_Usuario.Location = new Point(19, 22);
+            dgv_Usuario.Name = "dgv_Usuario";
+            dgv_Usuario.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv_Usuario.Size = new Size(274, 200);
+            dgv_Usuario.TabIndex = 5;
             // 
             // btn_excluir_categoria
             // 
@@ -77,14 +77,14 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Editar Usuários";
             groupBox_Tabela.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgv_Categoria).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_Usuario).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private GroupBox groupBox_Tabela;
-        private DataGridView dgv_Categoria;
+        private DataGridView dgv_Usuario;
         private Button btn_excluir_categoria;
     }
 }

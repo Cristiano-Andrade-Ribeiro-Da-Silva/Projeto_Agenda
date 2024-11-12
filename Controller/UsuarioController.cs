@@ -60,6 +60,47 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Controller
                 return false;
             }
         }
+        public DataTable GetUsuarios()
+        {
+            MySqlConnection conexao = null;
+            try
+            {
+
+
+                //Criando a conexão e usando a ConexãoDB que já foi criado
+                conexao = ConexãoDB.criador_conexao();
+
+                //SELECT montado para retornar todas as categorias
+                string sql = @"select nome AS 'Nome', usuario AS 'Usuário', telefone AS 'Telefone' from tb_usuarios;";
+
+                //Abrindo Conexão
+                conexao.Open();
+
+                //Criado o adaptador
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(sql, conexao);
+
+                //Tabela Vazia Criada
+                DataTable tabela = new DataTable();
+
+                //Pedindo Para o adaptador preencher a tabela
+                adaptador.Fill(tabela);
+
+                //Retorna a tabela preenchida
+                return tabela;
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show($"Erro ao recuperar os usuários: {erro.Message}");
+                return new DataTable();
+            }
+
+            finally
+            {
+                conexao.Close();
+            }
+
+
+        }
 
         public bool ValidarLogin(string usuario, string senha)
         {
