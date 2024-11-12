@@ -34,6 +34,8 @@
             eDITARToolStripMenuItem = new ToolStripMenuItem();
             cadastrarToolStripMenuItem = new ToolStripMenuItem();
             categoriasToolStripMenuItem = new ToolStripMenuItem();
+            usuáriosToolStripMenuItem = new ToolStripMenuItem();
+            editarUsuáriosToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -64,7 +66,7 @@
             // 
             // eDITARToolStripMenuItem
             // 
-            eDITARToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cadastrarToolStripMenuItem });
+            eDITARToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cadastrarToolStripMenuItem, usuáriosToolStripMenuItem });
             eDITARToolStripMenuItem.Name = "eDITARToolStripMenuItem";
             eDITARToolStripMenuItem.Size = new Size(49, 20);
             eDITARToolStripMenuItem.Text = "Editar";
@@ -73,15 +75,29 @@
             // 
             cadastrarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { categoriasToolStripMenuItem });
             cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            cadastrarToolStripMenuItem.Size = new Size(124, 22);
+            cadastrarToolStripMenuItem.Size = new Size(180, 22);
             cadastrarToolStripMenuItem.Text = "Cadastrar";
             // 
             // categoriasToolStripMenuItem
             // 
             categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
-            categoriasToolStripMenuItem.Size = new Size(130, 22);
+            categoriasToolStripMenuItem.Size = new Size(180, 22);
             categoriasToolStripMenuItem.Text = "Categorias";
             categoriasToolStripMenuItem.Click += categoriasToolStripMenuItem_Click;
+            // 
+            // usuáriosToolStripMenuItem
+            // 
+            usuáriosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { editarUsuáriosToolStripMenuItem });
+            usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
+            usuáriosToolStripMenuItem.Size = new Size(180, 22);
+            usuáriosToolStripMenuItem.Text = "Usuários";
+            // 
+            // editarUsuáriosToolStripMenuItem
+            // 
+            editarUsuáriosToolStripMenuItem.Name = "editarUsuáriosToolStripMenuItem";
+            editarUsuáriosToolStripMenuItem.Size = new Size(180, 22);
+            editarUsuáriosToolStripMenuItem.Text = "Editar Usuários";
+            editarUsuáriosToolStripMenuItem.Click += editarUsuáriosToolStripMenuItem_Click;
             // 
             // Frm_tela_principalcs
             // 
@@ -109,5 +125,7 @@
         private ToolStripMenuItem eDITARToolStripMenuItem;
         private ToolStripMenuItem cadastrarToolStripMenuItem;
         private ToolStripMenuItem categoriasToolStripMenuItem;
+        private ToolStripMenuItem usuáriosToolStripMenuItem;
+        private ToolStripMenuItem editarUsuáriosToolStripMenuItem;
     }
 }

@@ -27,5 +27,11 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Views
         {
             this.Close();
         }
+
+        private void editarUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEditarUsuarios frmEditarUsuarios = new FrmEditarUsuarios();
+            frmEditarUsuarios.ShowDialog();
+        }
     }
 }

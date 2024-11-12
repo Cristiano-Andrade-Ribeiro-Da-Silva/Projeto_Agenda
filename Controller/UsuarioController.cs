@@ -6,6 +6,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Controller
 {
@@ -62,10 +63,11 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Controller
 
         public bool ValidarLogin(string usuario, string senha)
         {
+            MySqlConnection conexao = null;
             try
             {
 
-                MySqlConnection conexao = ConexãoDB.criador_conexao();
+                conexao = ConexãoDB.criador_conexao();
 
                 string sql = @"select * from tb_usuarios
                            where usuario = @usuario 
@@ -99,6 +101,10 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Controller
                 return false;
             }
 
+            finally
+            {
+                conexao.Close();
+            }
         }
     }
 }
