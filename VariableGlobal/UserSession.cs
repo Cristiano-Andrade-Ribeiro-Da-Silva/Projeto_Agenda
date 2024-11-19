@@ -18,7 +18,7 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.VariableGlobal
         private static string _senha = null;
 
         // Encapsulei a váriavel para ter controle  doque está sendo inserido ou pego
-        public static string nome
+        public static string NomeSession
         {
             get
             {
@@ -31,7 +31,7 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.VariableGlobal
             }
         }
 
-        public static string usuario
+        public static string UsuarioSession
         {
             get
             {
@@ -45,7 +45,7 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.VariableGlobal
             }
         }
 
-        public static string senha
+        public static string SenhaSession
         {
             get
             {

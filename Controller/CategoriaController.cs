@@ -63,7 +63,7 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Controller
                  conexao = ConexãoDB.criador_conexao();
 
                 //SELECT montado para retornar todas as categorias
-                string sql = @"select cod_categoria AS 'Código', categoria AS 'Categoria' from tb_categoria;";
+                string sql = @"SELECT cod_categoria AS 'Código', categoria AS 'Categoria', usuario AS Usuário FROM tb_categoria;";
 
                 //Abrindo Conexão
                 conexao.Open();

@@ -25,5 +25,10 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Views
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

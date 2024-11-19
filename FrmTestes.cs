@@ -21,16 +21,16 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex
 
         private void button1_Click(object sender, EventArgs e)
         {
-            UserSession.nome = txb_nome.Text;
-            UserSession.usuario = txb_usuario.Text;
-            UserSession.senha = txb_senha.Text; 
+            UserSession.NomeSession = txb_nome.Text;
+            UserSession.UsuarioSession = txb_usuario.Text;
+            UserSession.SenhaSession = txb_senha.Text; 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"Bem vindo {UserSession.nome}");
-;           MessageBox.Show(UserSession.usuario);
-            MessageBox.Show(UserSession.senha);
+            MessageBox.Show($"Bem vindo {UserSession.NomeSession}");
+;           MessageBox.Show(UserSession.UsuarioSession);
+            MessageBox.Show(UserSession.SenhaSession);
         }
     }
 }

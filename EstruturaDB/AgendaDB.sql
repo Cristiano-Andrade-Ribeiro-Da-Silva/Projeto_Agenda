@@ -1,4 +1,4 @@
-create database dbagenda;
+create database if not exists dbagenda;
 
 use dbagenda;
 
@@ -18,4 +18,5 @@ select cod_categoria, categoria from tb_categoria;
 
 select cod_categoria AS 'Código', categoria AS 'Categoria' from tb_categoria;
 
- 
+
+select * from mysql.user;

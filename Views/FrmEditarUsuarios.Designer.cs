@@ -30,7 +30,8 @@
         {
             groupBox_Tabela = new GroupBox();
             dgv_Usuario = new DataGridView();
-            btn_excluir_categoria = new Button();
+            btn_excluir_usuarios = new Button();
+            btn_voltar = new Button();
             groupBox_Tabela.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgv_Usuario).BeginInit();
             SuspendLayout();
@@ -38,7 +39,7 @@
             // groupBox_Tabela
             // 
             groupBox_Tabela.Controls.Add(dgv_Usuario);
-            groupBox_Tabela.Controls.Add(btn_excluir_categoria);
+            groupBox_Tabela.Controls.Add(btn_excluir_usuarios);
             groupBox_Tabela.Location = new Point(27, 23);
             groupBox_Tabela.Name = "groupBox_Tabela";
             groupBox_Tabela.Size = new Size(313, 272);
@@ -55,22 +56,33 @@
             dgv_Usuario.Size = new Size(274, 200);
             dgv_Usuario.TabIndex = 5;
             // 
-            // btn_excluir_categoria
+            // btn_excluir_usuarios
             // 
-            btn_excluir_categoria.Location = new Point(86, 245);
-            btn_excluir_categoria.Margin = new Padding(3, 2, 3, 2);
-            btn_excluir_categoria.Name = "btn_excluir_categoria";
-            btn_excluir_categoria.Size = new Size(82, 22);
-            btn_excluir_categoria.TabIndex = 1;
-            btn_excluir_categoria.Text = "Excluir";
-            btn_excluir_categoria.UseVisualStyleBackColor = true;
-            btn_excluir_categoria.Click += btn_excluir_categoria_Click;
+            btn_excluir_usuarios.Location = new Point(86, 245);
+            btn_excluir_usuarios.Margin = new Padding(3, 2, 3, 2);
+            btn_excluir_usuarios.Name = "btn_excluir_usuarios";
+            btn_excluir_usuarios.Size = new Size(82, 22);
+            btn_excluir_usuarios.TabIndex = 1;
+            btn_excluir_usuarios.Text = "Excluir";
+            btn_excluir_usuarios.UseVisualStyleBackColor = true;
+            btn_excluir_usuarios.Click += btn_excluir_categoria_Click;
+            // 
+            // btn_voltar
+            // 
+            btn_voltar.Location = new Point(285, 315);
+            btn_voltar.Name = "btn_voltar";
+            btn_voltar.Size = new Size(75, 23);
+            btn_voltar.TabIndex = 8;
+            btn_voltar.Text = "Voltar";
+            btn_voltar.UseVisualStyleBackColor = true;
+            btn_voltar.Click += button1_Click;
             // 
             // FrmEditarUsuarios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(650, 350);
+            Controls.Add(btn_voltar);
             Controls.Add(groupBox_Tabela);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmEditarUsuarios";
@@ -85,6 +97,7 @@
 
         private GroupBox groupBox_Tabela;
         private DataGridView dgv_Usuario;
-        private Button btn_excluir_categoria;
+        private Button btn_excluir_usuarios;
+        private Button btn_voltar;
     }
 }

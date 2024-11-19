@@ -1,5 +1,6 @@
 using Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Controller;
 using Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Views;
+using Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.VariableGlobal;
 
 namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex
 {
@@ -14,7 +15,7 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex
         {
             //S e o Usuário for diferente do que vazio e a senha for maior ou igual que 8, abilita o botão "botao_login".
             // && serve igual and ou e.
-            if (textBox_usuario.Text != "" && textBox_senha.Text.Length >= 8)
+            if (txb_usuario.Text != "" && txb_senha.Text.Length >= 8)
             {
                 botao_login.Enabled = true;
                 Fechado.Visible = false;
@@ -50,9 +51,16 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex
 
         private void botao_login_Click(object sender, EventArgs e)
         {
+
+            UserSession.UsuarioSession = txb_usuario.Text;
+            UserSession.SenhaSession = txb_senha.Text;
+
+            MessageBox.Show(UserSession.UsuarioSession);
+            MessageBox.Show(UserSession.SenhaSession);
+
             this.Visible = false;
-            string usuario = textBox_usuario.Text;
-            string senha = textBox_senha.Text;
+            string usuario = txb_usuario.Text;
+            string senha = txb_senha.Text;
 
             UsuarioController controle_usuario = new UsuarioController();
 
