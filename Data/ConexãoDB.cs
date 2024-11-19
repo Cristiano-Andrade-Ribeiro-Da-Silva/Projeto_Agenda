@@ -19,5 +19,16 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Data
 
             return conexao;
         }
+
+        static public MySqlConnection CriarConexao(string usuario, string senha)
+        {
+            //String contendo as informações para a conexão
+            string stringconexao = $"server=127.0.0.1;Database=dbagenda;User ID={usuario};Password={senha};";
+
+            //Criando conexão
+            MySqlConnection conexao = new MySqlConnection(stringconexao);
+
+            return conexao;
+        }
     }
 }

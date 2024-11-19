@@ -14,8 +14,8 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
-
+            //Application.Run(new Form1());
+            Application.Run(new FrmTestes());
             //Se adcionar um "//" de comentário em um formulário aqui, apenas o formulário não comentado irá executar.
         }
     }
