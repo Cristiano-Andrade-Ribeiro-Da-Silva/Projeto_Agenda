@@ -18,7 +18,7 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Views
             InitializeComponent();
         }
 
-        private void Atalizador_DataGrid()
+        private void Atualizador_DataGrid()
         {
             CategoriaController controleCategoria = new CategoriaController();
             DataTable tabela = controleCategoria.GetCategorias();
@@ -27,7 +27,7 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Views
         private void btn_cadastrar_categoria_Click(object sender, EventArgs e)
         {
             //Cria a variavel string para TextBox 
-            string criar_categoria = txt_criar_categoria.Text;
+            string criar_categoria = txb_criar_categoria.Text;
 
             //Cria uma nova categoria controler
             CategoriaController categoriaController = new CategoriaController();
@@ -36,7 +36,7 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Views
             bool resultado = categoriaController.AddCategoria(criar_categoria);
 
             //Usando Função
-            Atalizador_DataGrid();
+            Atualizador_DataGrid();
 
             //Usando variavel resultado
             if (resultado == true)
@@ -58,12 +58,25 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Views
 
             categoriaController.DelCategoria(codigo);
 
-            Atalizador_DataGrid();
+            Atualizador_DataGrid();
         }
 
         private void FrmCadastrarCategoriacs_Load(object sender, EventArgs e)
         {
-            Atalizador_DataGrid();
+            Atualizador_DataGrid();
+        }
+
+        private void btn_atualizar_Click(object sender, EventArgs e)
+        {
+            int cod_categoria = Convert.ToInt32(txb_cod_categoria.Text);
+
+            string categoria = txb_novo_nome_categoria.Text;
+
+            CategoriaController categoriaController = new CategoriaController();
+
+            categoriaController.AlterCategoria(cod_categoria, categoria);
+
+            Atualizador_DataGrid();
         }
     }
 }

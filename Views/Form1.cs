@@ -13,7 +13,7 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex
 
         private void abilitar_login_botao()
         {
-            //S e o Usuário for diferente do que vazio e a senha for maior ou igual que 8, abilita o botão "botao_login".
+            //Se o Usuário for diferente do que vazio e a senha for maior ou igual que 8, abilita o botão "botao_login".
             // && serve igual and ou e.
             if (txb_usuario.Text != "" && txb_senha.Text.Length >= 8)
             {

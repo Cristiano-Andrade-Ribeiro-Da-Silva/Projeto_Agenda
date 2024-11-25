@@ -132,6 +132,45 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Controller
                 conexao.Close();
             }
         }
+
+        public DataTable AlterCategoria(int cod_categoria,string categoria)
+        {
+            MySqlConnection conexao = null;
+            try
+            {
+                conexao = ConexãoDB.criador_conexao();
+
+                string sql = $"UPDATE tb_categoria SET categoria = '{categoria}'" +
+                             $"WHERE cod_categoria = @cod_categoria;";
+
+                conexao.Open();
+
+                MySqlCommand comando = new MySqlCommand (sql, conexao);
+
+                comando.Parameters.AddWithValue("@cod_categoria", cod_categoria);
+                comando.Parameters.AddWithValue("@categoria", categoria);
+                int linhasAfetadas = comando.ExecuteNonQuery();
+
+                if (linhasAfetadas > 0)
+                {
+                    return new DataTable();
+                }
+
+                else
+                {
+                    return new DataTable();
+                }
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show($"Erro ao excluir categoria : {erro.Message}");
+                return new DataTable();
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
     }
 }
 
