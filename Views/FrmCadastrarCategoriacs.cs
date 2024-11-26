@@ -68,9 +68,9 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Views
 
         private void btn_atualizar_Click(object sender, EventArgs e)
         {
-            int cod_categoria = Convert.ToInt32(txb_cod_categoria.Text);
+            int cod_categoria = Convert.ToInt32(dgv_Categoria.SelectedRows[0].Cells[0].Value);
 
-            string categoria = txb_novo_nome_categoria.Text;
+            string categoria = txb_criar_categoria.Text;
 
             CategoriaController categoriaController = new CategoriaController();
 

@@ -123,7 +123,7 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Controller
             }
             catch(Exception erro)
             {
-                MessageBox.Show($"Erro ao excluir categoria : {erro.Message}");
+                MessageBox.Show($"Erro ao deletar categoria : {erro.Message}");
                 return new DataTable();
             }
 

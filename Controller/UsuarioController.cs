@@ -63,6 +63,47 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Controller
                 return false;
             }
         }
+
+        public bool DelUsuario(string usuario)
+        {
+            MySqlConnection conexao = null;
+            try
+            {
+                conexao = ConexãoDB.criador_conexao();
+
+                string sql = "DELETE FROM tb_usuarios WHERE usuario = @usuario;";
+
+                conexao.Open();
+
+                MySqlCommand comando = new MySqlCommand(sql, conexao);
+
+                comando.Parameters.AddWithValue("@usuario", usuario);
+
+                int linhasAfetadas = comando.ExecuteNonQuery();
+
+                if (linhasAfetadas > 0)
+                {
+                    return true;
+                }
+
+                else
+                {
+                    return false;
+                }
+            }
+
+            catch (Exception erro)
+            {
+                MessageBox.Show($"Erro ao deletar: {erro.Message}", "Erro ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return false;
+            }
+
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
         public DataTable GetUsuarios()
         {
             MySqlConnection conexao = null;

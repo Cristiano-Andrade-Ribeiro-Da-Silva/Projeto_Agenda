@@ -65,7 +65,7 @@
             btn_excluir_usuarios.TabIndex = 1;
             btn_excluir_usuarios.Text = "Excluir";
             btn_excluir_usuarios.UseVisualStyleBackColor = true;
-            btn_excluir_usuarios.Click += btn_excluir_categoria_Click;
+            btn_excluir_usuarios.Click += btn_excluir_usuarios_Click;
             // 
             // btn_voltar
             // 
@@ -75,7 +75,7 @@
             btn_voltar.TabIndex = 8;
             btn_voltar.Text = "Voltar";
             btn_voltar.UseVisualStyleBackColor = true;
-            btn_voltar.Click += button1_Click;
+            btn_voltar.Click += btn_voltar_Click;
             // 
             // FrmEditarUsuarios
             // 

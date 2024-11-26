@@ -21,12 +21,32 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Views
             dgv_Usuario.DataSource = tabela;
         }
 
+        private void Atualizador_DataGrid()
+        {
+            CategoriaController controleCategoria = new CategoriaController();
+            DataTable tabela = controleCategoria.GetCategorias();
+            dgv_Usuario.DataSource = tabela;
+        }
+
         private void btn_excluir_categoria_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_excluir_usuarios_Click(object sender, EventArgs e)
+        {
+            string usuario = dgv_Usuario.SelectedRows[0].Cells[1].Value.ToString();
+
+            UsuarioController usuarioController = new UsuarioController();
+
+            usuarioController.DelUsuario(usuario);
+
+            Atualizador_DataGrid();
+
+
+        }
+
+        private void btn_voltar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
