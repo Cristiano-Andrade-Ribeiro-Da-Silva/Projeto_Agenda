@@ -16,6 +16,7 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Views
         public FrmCadastrarCategoriacs()
         {
             InitializeComponent();
+            Atualizador_DataGrid();
         }
 
         private void Atualizador_DataGrid()

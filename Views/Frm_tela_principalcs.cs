@@ -18,26 +18,32 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Views
             InitializeComponent();
         }
 
-        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmCadastrarCategoriacs FrmCadastrarCategoria = new FrmCadastrarCategoriacs();
-            FrmCadastrarCategoria.ShowDialog();
-        }
-
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void editarUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Frm_tela_principalcs_Load(object sender, EventArgs e)
+        {
+            lbl_ola_nome.Text = $"Bem vindo(a) {VariableGlobal.UserSession.NomeSession.ToString()}, use nosso aplicativo com moderação";
+        }
+
+        private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmEditarUsuarios frmEditarUsuarios = new FrmEditarUsuarios();
             frmEditarUsuarios.ShowDialog();
         }
 
-        private void Frm_tela_principalcs_Load(object sender, EventArgs e)
+        private void contatosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            lbl_ola_nome.Text = $"Bem vindo(a) {VariableGlobal.UserSession.NomeSession.ToString()}, use nosso aplicativo com moderação";
+            Frm_Contatos frm_Contatos = new Frm_Contatos();
+            frm_Contatos.ShowDialog();
+        }
+
+        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCadastrarCategoriacs FrmCadastrarCategoria = new FrmCadastrarCategoriacs();
+            FrmCadastrarCategoria.ShowDialog();
         }
     }
 }

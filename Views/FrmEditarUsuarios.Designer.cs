@@ -54,9 +54,9 @@
             // 
             groupBox_Tabela1.Controls.Add(dgv_Usuario);
             groupBox_Tabela1.Controls.Add(btn_excluir_usuario);
-            groupBox_Tabela1.Location = new Point(90, 240);
+            groupBox_Tabela1.Location = new Point(49, 241);
             groupBox_Tabela1.Name = "groupBox_Tabela1";
-            groupBox_Tabela1.Size = new Size(390, 272);
+            groupBox_Tabela1.Size = new Size(473, 272);
             groupBox_Tabela1.TabIndex = 9;
             groupBox_Tabela1.TabStop = false;
             groupBox_Tabela1.Text = "Usuários";
@@ -64,15 +64,15 @@
             // dgv_Usuario
             // 
             dgv_Usuario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv_Usuario.Location = new Point(25, 22);
+            dgv_Usuario.Location = new Point(16, 22);
             dgv_Usuario.Name = "dgv_Usuario";
             dgv_Usuario.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgv_Usuario.Size = new Size(342, 200);
+            dgv_Usuario.Size = new Size(440, 200);
             dgv_Usuario.TabIndex = 5;
             // 
             // btn_excluir_usuario
             // 
-            btn_excluir_usuario.Location = new Point(151, 245);
+            btn_excluir_usuario.Location = new Point(192, 245);
             btn_excluir_usuario.Margin = new Padding(3, 2, 3, 2);
             btn_excluir_usuario.Name = "btn_excluir_usuario";
             btn_excluir_usuario.Size = new Size(82, 22);

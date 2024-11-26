@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Data;
+using Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.VariableGlobal;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -60,10 +61,15 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Controller
 
 
                 //Criando a conexão e usando a ConexãoDB que já foi criado
-                 conexao = ConexãoDB.criador_conexao();
+                 conexao = ConexãoDB.CriarConexao(UserSession.UsuarioSession, UserSession.SenhaSession);
 
                 //SELECT montado para retornar todas as categorias
-                string sql = @"SELECT cod_categoria AS 'Código', categoria AS 'Categoria', usuario AS Usuário FROM tb_categoria;";
+                string sql = @"SELECT cod_categoria AS 'Código', categoria AS 'Categoria', usuario AS Usuário FROM tb_categoria" +
+                             "WHERE usuario = USER();";
+
+                // Ou "WHERE usuario LIKE '{UserSession.usuario}'%"
+                // Desse segundo modo, existe a possibilidade de ser hakeado 
+
 
                 //Abrindo Conexão
                 conexao.Open();

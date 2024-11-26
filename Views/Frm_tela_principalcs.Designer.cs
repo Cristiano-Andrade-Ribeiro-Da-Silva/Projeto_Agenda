@@ -32,10 +32,9 @@
             arquivoToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
             eDITARToolStripMenuItem = new ToolStripMenuItem();
-            cadastrarToolStripMenuItem = new ToolStripMenuItem();
-            categoriasToolStripMenuItem = new ToolStripMenuItem();
             usuáriosToolStripMenuItem = new ToolStripMenuItem();
-            editarUsuáriosToolStripMenuItem = new ToolStripMenuItem();
+            contatosToolStripMenuItem = new ToolStripMenuItem();
+            categoriasToolStripMenuItem = new ToolStripMenuItem();
             mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             lbl_ola_nome = new Label();
             menuStrip1.SuspendLayout();
@@ -68,38 +67,31 @@
             // 
             // eDITARToolStripMenuItem
             // 
-            eDITARToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cadastrarToolStripMenuItem, usuáriosToolStripMenuItem });
+            eDITARToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { usuáriosToolStripMenuItem, contatosToolStripMenuItem, categoriasToolStripMenuItem });
             eDITARToolStripMenuItem.Name = "eDITARToolStripMenuItem";
             eDITARToolStripMenuItem.Size = new Size(49, 20);
             eDITARToolStripMenuItem.Text = "Editar";
             // 
-            // cadastrarToolStripMenuItem
+            // usuáriosToolStripMenuItem
             // 
-            cadastrarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { categoriasToolStripMenuItem });
-            cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            cadastrarToolStripMenuItem.Size = new Size(124, 22);
-            cadastrarToolStripMenuItem.Text = "Cadastrar";
+            usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
+            usuáriosToolStripMenuItem.Size = new Size(180, 22);
+            usuáriosToolStripMenuItem.Text = "Usuários";
+            usuáriosToolStripMenuItem.Click += usuáriosToolStripMenuItem_Click;
+            // 
+            // contatosToolStripMenuItem
+            // 
+            contatosToolStripMenuItem.Name = "contatosToolStripMenuItem";
+            contatosToolStripMenuItem.Size = new Size(180, 22);
+            contatosToolStripMenuItem.Text = "Contatos";
+            contatosToolStripMenuItem.Click += contatosToolStripMenuItem_Click;
             // 
             // categoriasToolStripMenuItem
             // 
             categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
-            categoriasToolStripMenuItem.Size = new Size(130, 22);
+            categoriasToolStripMenuItem.Size = new Size(180, 22);
             categoriasToolStripMenuItem.Text = "Categorias";
             categoriasToolStripMenuItem.Click += categoriasToolStripMenuItem_Click;
-            // 
-            // usuáriosToolStripMenuItem
-            // 
-            usuáriosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { editarUsuáriosToolStripMenuItem });
-            usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
-            usuáriosToolStripMenuItem.Size = new Size(124, 22);
-            usuáriosToolStripMenuItem.Text = "Usuários";
-            // 
-            // editarUsuáriosToolStripMenuItem
-            // 
-            editarUsuáriosToolStripMenuItem.Name = "editarUsuáriosToolStripMenuItem";
-            editarUsuáriosToolStripMenuItem.Size = new Size(152, 22);
-            editarUsuáriosToolStripMenuItem.Text = "Editar Usuários";
-            editarUsuáriosToolStripMenuItem.Click += editarUsuáriosToolStripMenuItem_Click;
             // 
             // mySqlCommand1
             // 
@@ -143,11 +135,10 @@
         private ToolStripMenuItem arquivoToolStripMenuItem;
         private ToolStripMenuItem sairToolStripMenuItem;
         private ToolStripMenuItem eDITARToolStripMenuItem;
-        private ToolStripMenuItem cadastrarToolStripMenuItem;
-        private ToolStripMenuItem categoriasToolStripMenuItem;
-        private ToolStripMenuItem usuáriosToolStripMenuItem;
-        private ToolStripMenuItem editarUsuáriosToolStripMenuItem;
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
         private Label lbl_ola_nome;
+        private ToolStripMenuItem usuáriosToolStripMenuItem;
+        private ToolStripMenuItem contatosToolStripMenuItem;
+        private ToolStripMenuItem categoriasToolStripMenuItem;
     }
 }
