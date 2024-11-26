@@ -58,7 +58,7 @@
             // 
             // btn_excluir_usuarios
             // 
-            btn_excluir_usuarios.Location = new Point(86, 245);
+            btn_excluir_usuarios.Location = new Point(118, 245);
             btn_excluir_usuarios.Margin = new Padding(3, 2, 3, 2);
             btn_excluir_usuarios.Name = "btn_excluir_usuarios";
             btn_excluir_usuarios.Size = new Size(82, 22);

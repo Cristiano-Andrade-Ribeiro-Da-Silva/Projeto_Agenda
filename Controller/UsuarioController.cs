@@ -7,6 +7,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.VariableGlobal;
 
 namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Controller
 {
@@ -73,7 +74,7 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Controller
                 conexao = ConexãoDB.criador_conexao();
 
                 //SELECT montado para retornar todas as categorias
-                string sql = @"select nome AS 'Nome', usuario AS 'Usuário', telefone AS 'Telefone' from tb_usuarios;";
+                string sql = @"SELECT nome AS 'Nome', usuario AS 'Usuário', telefone AS 'Telefone' FROM tb_usuarios;";
 
                 //Abrindo Conexão
                 conexao.Open();
@@ -112,9 +113,9 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Controller
 
                 conexao = ConexãoDB.criador_conexao();
 
-                string sql = @"select * from tb_usuarios
-                           where usuario = @usuario 
-                           and binary senha = @senha;";
+                string sql = @"SELECT nome, usuario, telefone, senha FROM tb_usuarios
+                           WHERE usuario = @usuario 
+                           AND BINARY senha = @senha;";
 
                 conexao.Open();
 
@@ -127,6 +128,12 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Controller
 
                 if (resultado.Read())
                 {
+                    // O "usuario" no "GetString" é o nome da coluna da tabela.
+                    // Existe a opção de apenas colocar "0" no lugar do "usuario", independente do lugar da coluna.
+                    UserSession.UsuarioSession = resultado.GetString("usuario");
+                    UserSession.NomeSession = resultado.GetString("nome");
+                    UserSession.SenhaSession = resultado.GetString("senha");
+
                     conexao.Close();
                     return true;
                 }
@@ -149,5 +156,6 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Controller
                 conexao.Close();
             }
         }
+
     }
 }

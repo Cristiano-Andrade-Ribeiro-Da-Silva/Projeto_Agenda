@@ -70,7 +70,7 @@
             groupBox_nova_categoria.Controls.Add(btn_cadastrar_categoria);
             groupBox_nova_categoria.Location = new Point(69, 35);
             groupBox_nova_categoria.Name = "groupBox_nova_categoria";
-            groupBox_nova_categoria.Size = new Size(250, 150);
+            groupBox_nova_categoria.Size = new Size(250, 170);
             groupBox_nova_categoria.TabIndex = 3;
             groupBox_nova_categoria.TabStop = false;
             groupBox_nova_categoria.Text = "Insira a nova categoria";
@@ -87,7 +87,7 @@
             // 
             // btn_Voltar
             // 
-            btn_Voltar.Location = new Point(203, 565);
+            btn_Voltar.Location = new Point(346, 565);
             btn_Voltar.Name = "btn_Voltar";
             btn_Voltar.Size = new Size(82, 23);
             btn_Voltar.TabIndex = 4;
@@ -119,7 +119,7 @@
             // 
             groupBox_Tabela.Controls.Add(dgv_Categoria);
             groupBox_Tabela.Controls.Add(btn_excluir_categoria);
-            groupBox_Tabela.Location = new Point(50, 250);
+            groupBox_Tabela.Location = new Point(193, 239);
             groupBox_Tabela.Name = "groupBox_Tabela";
             groupBox_Tabela.Size = new Size(383, 272);
             groupBox_Tabela.TabIndex = 6;

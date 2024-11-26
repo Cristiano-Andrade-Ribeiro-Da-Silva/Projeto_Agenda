@@ -158,6 +158,7 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            Load += Form1_Load_1;
             ((System.ComponentModel.ISupportInitialize)Fechado).EndInit();
             ((System.ComponentModel.ISupportInitialize)Aberto).EndInit();
             ResumeLayout(false);

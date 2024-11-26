@@ -34,8 +34,6 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex
         {
             Frm_Tela_De_Cadastro frm_Tela_De_Cadastro = new Frm_Tela_De_Cadastro();
             frm_Tela_De_Cadastro.ShowDialog();
-
-
         }
 
         private void textBox_usuario_TextChanged(object sender, EventArgs e)
@@ -51,13 +49,6 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex
 
         private void botao_login_Click(object sender, EventArgs e)
         {
-
-            UserSession.UsuarioSession = txb_usuario.Text;
-            UserSession.SenhaSession = txb_senha.Text;
-
-            MessageBox.Show(UserSession.UsuarioSession);
-            MessageBox.Show(UserSession.SenhaSession);
-
             this.Visible = false;
             string usuario = txb_usuario.Text;
             string senha = txb_senha.Text;
@@ -66,13 +57,16 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex
 
             bool resultado = controle_usuario.ValidarLogin(usuario, senha);
 
-            if (resultado == true) 
+            if (resultado == true)
             {
+                UserSession.UsuarioSession = txb_usuario.Text;
+                UserSession.SenhaSession = txb_senha.Text;
+
                 Frm_tela_principalcs frm_Tela_Principalcs = new Frm_tela_principalcs();
                 frm_Tela_Principalcs.ShowDialog();
                 this.Close();
-                
-                
+
+
             }
 
             if (resultado == false)
@@ -80,6 +74,16 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex
                 MessageBox.Show("Erro: Usuário ou Senha incorreta");
                 this.Visible = true;
             }
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
 
         }
     }

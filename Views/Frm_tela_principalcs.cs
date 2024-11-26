@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,6 +33,11 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Views
         {
             FrmEditarUsuarios frmEditarUsuarios = new FrmEditarUsuarios();
             frmEditarUsuarios.ShowDialog();
+        }
+
+        private void Frm_tela_principalcs_Load(object sender, EventArgs e)
+        {
+            lbl_ola_nome.Text = $"Bem vindo(a) {VariableGlobal.UserSession.NomeSession.ToString()}, use nosso aplicativo com moderação";
         }
     }
 }
