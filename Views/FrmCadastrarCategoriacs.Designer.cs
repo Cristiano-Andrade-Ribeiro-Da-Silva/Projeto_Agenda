@@ -43,7 +43,7 @@
             // 
             // txb_criar_categoria
             // 
-            txb_criar_categoria.Location = new Point(71, 42);
+            txb_criar_categoria.Location = new Point(70, 40);
             txb_criar_categoria.Margin = new Padding(3, 2, 3, 2);
             txb_criar_categoria.Name = "txb_criar_categoria";
             txb_criar_categoria.Size = new Size(110, 23);
@@ -51,7 +51,7 @@
             // 
             // btn_cadastrar_categoria
             // 
-            btn_cadastrar_categoria.Location = new Point(85, 99);
+            btn_cadastrar_categoria.Location = new Point(85, 100);
             btn_cadastrar_categoria.Margin = new Padding(3, 2, 3, 2);
             btn_cadastrar_categoria.Name = "btn_cadastrar_categoria";
             btn_cadastrar_categoria.Size = new Size(82, 22);
@@ -65,7 +65,7 @@
             groupBox_nova_categoria.Controls.Add(btn_atualizar);
             groupBox_nova_categoria.Controls.Add(txb_criar_categoria);
             groupBox_nova_categoria.Controls.Add(btn_cadastrar_categoria);
-            groupBox_nova_categoria.Location = new Point(160, 38);
+            groupBox_nova_categoria.Location = new Point(160, 40);
             groupBox_nova_categoria.Name = "groupBox_nova_categoria";
             groupBox_nova_categoria.Size = new Size(250, 170);
             groupBox_nova_categoria.TabIndex = 3;
@@ -95,7 +95,7 @@
             // dgv_Categoria
             // 
             dgv_Categoria.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv_Categoria.Location = new Point(19, 22);
+            dgv_Categoria.Location = new Point(23, 22);
             dgv_Categoria.Name = "dgv_Categoria";
             dgv_Categoria.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv_Categoria.Size = new Size(342, 200);
@@ -103,7 +103,7 @@
             // 
             // btn_excluir_categoria
             // 
-            btn_excluir_categoria.Location = new Point(135, 245);
+            btn_excluir_categoria.Location = new Point(151, 245);
             btn_excluir_categoria.Margin = new Padding(3, 2, 3, 2);
             btn_excluir_categoria.Name = "btn_excluir_categoria";
             btn_excluir_categoria.Size = new Size(82, 22);
@@ -116,9 +116,9 @@
             // 
             groupBox_Tabela.Controls.Add(dgv_Categoria);
             groupBox_Tabela.Controls.Add(btn_excluir_categoria);
-            groupBox_Tabela.Location = new Point(110, 239);
+            groupBox_Tabela.Location = new Point(90, 240);
             groupBox_Tabela.Name = "groupBox_Tabela";
-            groupBox_Tabela.Size = new Size(383, 272);
+            groupBox_Tabela.Size = new Size(390, 270);
             groupBox_Tabela.TabIndex = 6;
             groupBox_Tabela.TabStop = false;
             groupBox_Tabela.Text = "Categorias";
@@ -136,7 +136,6 @@
             Name = "FrmCadastrarCategoriacs";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmCadastrarCategoriacs";
-            Load += FrmCadastrarCategoriacs_Load;
             groupBox_nova_categoria.ResumeLayout(false);
             groupBox_nova_categoria.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgv_Categoria).EndInit();

@@ -115,7 +115,7 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Controller
                 conexao = ConexãoDB.criador_conexao();
 
                 //SELECT montado para retornar todas as categorias
-                string sql = @"SELECT nome AS 'Nome', usuario AS 'Usuário', telefone AS 'Telefone' FROM tb_usuarios;";
+                string sql = @"SELECT nome AS 'Nome', usuario AS 'Usuário', telefone AS 'Telefone', senha AS 'Senha' FROM tb_usuarios;";
 
                 //Abrindo Conexão
                 conexao.Open();
@@ -192,6 +192,47 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Controller
                 return false;
             }
 
+            finally
+            {
+                conexao.Close();
+            }
+
+
+        }
+
+        public DataTable AlterSenha(string usuario, string senha)
+        {
+            MySqlConnection conexao = null;
+            try
+            {
+                conexao = ConexãoDB.criador_conexao();
+
+                string sql = $"UPDATE tb_usuarios SET senha = '{senha}'" +
+                             $"WHERE usuario = @usuario;";
+
+                conexao.Open();
+
+                MySqlCommand comando = new MySqlCommand(sql, conexao);
+
+                comando.Parameters.AddWithValue("@usuario", usuario);
+                comando.Parameters.AddWithValue("@senha", senha);
+                int linhasAfetadas = comando.ExecuteNonQuery();
+
+                if (linhasAfetadas > 0)
+                {
+                    return new DataTable();
+                }
+
+                else
+                {
+                    return new DataTable();
+                }
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show($"Erro ao alterar senha : {erro.Message}");
+                return new DataTable();
+            }
             finally
             {
                 conexao.Close();

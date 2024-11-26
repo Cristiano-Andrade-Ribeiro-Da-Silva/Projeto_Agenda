@@ -23,17 +23,18 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Views
 
         private void Atualizador_DataGrid()
         {
-            CategoriaController controleCategoria = new CategoriaController();
-            DataTable tabela = controleCategoria.GetCategorias();
+            UsuarioController usuarioController = new UsuarioController();
+            DataTable tabela = usuarioController.GetUsuarios();
             dgv_Usuario.DataSource = tabela;
         }
 
-        private void btn_excluir_categoria_Click(object sender, EventArgs e)
-        {
 
+        private void btn_voltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
-        private void btn_excluir_usuarios_Click(object sender, EventArgs e)
+        private void btn_excluir_categoria_Click_1(object sender, EventArgs e)
         {
             string usuario = dgv_Usuario.SelectedRows[0].Cells[1].Value.ToString();
 
@@ -42,13 +43,19 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Views
             usuarioController.DelUsuario(usuario);
 
             Atualizador_DataGrid();
-
-
         }
 
-        private void btn_voltar_Click(object sender, EventArgs e)
+        private void btn_alterar_senha_Click(object sender, EventArgs e)
         {
-            this.Close();
+            string usuario = dgv_Usuario.SelectedRows[0].Cells[1].Value.ToString();
+
+            string senha = txb_alterar_senha.Text;
+
+            UsuarioController usuarioController = new UsuarioController();
+
+            usuarioController.AlterSenha(usuario, senha);
+
+            Atualizador_DataGrid();
         }
     }
 }
