@@ -17,7 +17,7 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Controller
             MySqlConnection conexao = null;
             try
             {
-                conexao = ConexãoDB.criador_conexao();
+                conexao = ConexãoDB.CriarConexao(UserSession.UsuarioSession, UserSession.SenhaSession);
 
                 string sql = "INSERT INTO tb_categoria(categoria) VALUES(@categoria);";
 
@@ -64,8 +64,7 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Controller
                  conexao = ConexãoDB.CriarConexao(UserSession.UsuarioSession, UserSession.SenhaSession);
 
                 //SELECT montado para retornar todas as categorias
-                string sql = @"SELECT cod_categoria AS 'Código', categoria AS 'Categoria', usuario AS Usuário FROM tb_categoria" +
-                             "WHERE usuario = USER();";
+                string sql = @"SELECT cod_categoria AS 'Código', categoria AS 'Categoria', usuario AS 'Usuário' FROM tb_categoria WHERE usuario = USER();";
 
                 // Ou "WHERE usuario LIKE '{UserSession.usuario}'%"
                 // Desse segundo modo, existe a possibilidade de ser hakeado 
@@ -105,7 +104,7 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Controller
             MySqlConnection conexao = null;
             try
             {
-                conexao = ConexãoDB.criador_conexao();
+                conexao = ConexãoDB.CriarConexao(UserSession.UsuarioSession, UserSession.UsuarioSession);
 
                 string sql = @"DELETE FROM tb_categoria WHERE cod_categoria = @cod_categoria;";
 
@@ -144,7 +143,7 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Controller
             MySqlConnection conexao = null;
             try
             {
-                conexao = ConexãoDB.criador_conexao();
+                conexao = ConexãoDB.CriarConexao(UserSession.UsuarioSession, UserSession.UsuarioSession);
 
                 string sql = $"UPDATE tb_categoria SET categoria = '{categoria}'" +
                              $"WHERE cod_categoria = @cod_categoria;";

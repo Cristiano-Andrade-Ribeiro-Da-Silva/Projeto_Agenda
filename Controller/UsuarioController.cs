@@ -23,8 +23,8 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Controller
 
                 //Comando SQL que será executado
                 string sql = "INSERT INTO tb_usuarios (nome, usuario, telefone, senha) VALUES (@nome, @usuario, @telefone, @senha);" +
-                             $"CREATE USER '{usuario}'@'%' IDENTIFIED BY '@senha';" +
-                             $"GRANT ALL PRIVILEGES ON db_agenda.* TO '{usuario}'@'%';";
+                             $"CREATE USER '{usuario}'@'%' IDENTIFIED BY '{senha}';" +
+                             $"GRANT ALL PRIVILEGES ON dbagenda.* TO '{usuario}'@'%';";
 
                 //Abri a conexão com o banco
                 conexao.Open();

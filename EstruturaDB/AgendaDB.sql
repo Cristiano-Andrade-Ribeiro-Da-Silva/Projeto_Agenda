@@ -18,7 +18,7 @@ usuario VARCHAR(50)
  
 SELECT cod_categoria, categoria, usuario FROM tb_categoria;
 
-SELECT cod_categoria AS 'Código', categoria AS 'Categoria' FROM tb_categoria;
+SELECT cod_categoria AS 'Código', categoria AS 'Categoria', usuario AS 'Usuário' FROM tb_categoria;
 
 SELECT * FROM mysql.USER;
 
@@ -31,6 +31,15 @@ descriçao VARCHAR(1000) );
  select * from tb_log;
  
  
+  CREATE TABLE IF NOT EXISTS tb_contatos(
+ cod_contato INT AUTO_INCREMENT PRIMARY KEY,
+ contato VARCHAR(50),
+ telefone VARCHAR(15),
+ categoria VARCHAR(40) );
+ 
+ SELECT cod_contato, contato, telefone, categoria FROM tb_contatos;
+ 
+ 
 DELIMITER $$
 
 CREATE TRIGGER TrInsertCategoria
@@ -38,13 +47,13 @@ BEFORE INSERT ON tb_categoria
 FOR EACH ROW
 BEGIN
 
-SET NEW.usuario = CURRENT_USER();
+SET NEW.usuario = USER();
 
 END;
 $$
 
 DELIMITER ;
-
+drop database dbagenda;
 
 DELIMITER $$
 
@@ -92,3 +101,4 @@ END;
 $$
 
 DELIMITER ;
+

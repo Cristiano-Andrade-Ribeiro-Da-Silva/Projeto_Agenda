@@ -16,24 +16,39 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Views
         public Frm_Contatos()
         {
             InitializeComponent();
+            Atualizador_DataGrid();
         }
 
-        private void btn_cadastrar_categoria_Click(object sender, EventArgs e)
+        private void Atualizador_DataGrid()
         {
-
+            ContatosController contatosController = new ContatosController();
+            DataTable tabela = contatosController.GetContatos();
+            dgv_Contatos.DataSource = tabela;
         }
 
-        private void Frm_Contatos_Load(object sender, EventArgs e)
+        private void btn_cadastrar_contato_Click(object sender, EventArgs e)
         {
-            CategoriaController categoriaController = new CategoriaController();
+            string criar_nome_contato = txb_Contato.Text;
 
-            DataTable tabela = categoriaController.GetCategorias();
+            string criar_telefone_contato = txb_Telefone.Text;
 
-            cbx_Categoria.DataSource = tabela;
-            cbx_Categoria.DisplayMember = "categoria";
-            cbx_Categoria.DisplayMember = "cod_categoria";
+            string criar_categoria_contato = cbx_Categoria.Text;
 
+            ContatosController contatosController = new ContatosController();
 
+            bool resultado = contatosController.AddContato(criar_nome_contato, criar_telefone_contato, criar_categoria_contato);
+
+            Atualizador_DataGrid();
+
+            if (resultado == true)
+            {
+                MessageBox.Show("Cadastro efetuado com Sucesso");
+            }
+        }
+
+        private void btn_atualizar_contato_Click(object sender, EventArgs e)
+        {
+         
         }
     }
 }
