@@ -43,18 +43,16 @@
             // 
             // txb_criar_categoria
             // 
-            txb_criar_categoria.Location = new Point(70, 40);
-            txb_criar_categoria.Margin = new Padding(3, 2, 3, 2);
+            txb_criar_categoria.Location = new Point(80, 53);
             txb_criar_categoria.Name = "txb_criar_categoria";
-            txb_criar_categoria.Size = new Size(110, 23);
+            txb_criar_categoria.Size = new Size(125, 27);
             txb_criar_categoria.TabIndex = 0;
             // 
             // btn_cadastrar_categoria
             // 
-            btn_cadastrar_categoria.Location = new Point(85, 100);
-            btn_cadastrar_categoria.Margin = new Padding(3, 2, 3, 2);
+            btn_cadastrar_categoria.Location = new Point(97, 133);
             btn_cadastrar_categoria.Name = "btn_cadastrar_categoria";
-            btn_cadastrar_categoria.Size = new Size(82, 22);
+            btn_cadastrar_categoria.Size = new Size(94, 29);
             btn_cadastrar_categoria.TabIndex = 1;
             btn_cadastrar_categoria.Text = "Cadastrar";
             btn_cadastrar_categoria.UseVisualStyleBackColor = true;
@@ -65,18 +63,21 @@
             groupBox_nova_categoria.Controls.Add(btn_atualizar);
             groupBox_nova_categoria.Controls.Add(txb_criar_categoria);
             groupBox_nova_categoria.Controls.Add(btn_cadastrar_categoria);
-            groupBox_nova_categoria.Location = new Point(160, 40);
+            groupBox_nova_categoria.Location = new Point(183, 53);
+            groupBox_nova_categoria.Margin = new Padding(3, 4, 3, 4);
             groupBox_nova_categoria.Name = "groupBox_nova_categoria";
-            groupBox_nova_categoria.Size = new Size(250, 170);
+            groupBox_nova_categoria.Padding = new Padding(3, 4, 3, 4);
+            groupBox_nova_categoria.Size = new Size(286, 227);
             groupBox_nova_categoria.TabIndex = 3;
             groupBox_nova_categoria.TabStop = false;
             groupBox_nova_categoria.Text = "Insira a nova categoria";
             // 
             // btn_atualizar
             // 
-            btn_atualizar.Location = new Point(85, 141);
+            btn_atualizar.Location = new Point(97, 188);
+            btn_atualizar.Margin = new Padding(3, 4, 3, 4);
             btn_atualizar.Name = "btn_atualizar";
-            btn_atualizar.Size = new Size(82, 23);
+            btn_atualizar.Size = new Size(94, 31);
             btn_atualizar.TabIndex = 7;
             btn_atualizar.Text = "Atualizar";
             btn_atualizar.UseVisualStyleBackColor = true;
@@ -84,9 +85,10 @@
             // 
             // btn_Voltar
             // 
-            btn_Voltar.Location = new Point(245, 565);
+            btn_Voltar.Location = new Point(280, 753);
+            btn_Voltar.Margin = new Padding(3, 4, 3, 4);
             btn_Voltar.Name = "btn_Voltar";
-            btn_Voltar.Size = new Size(82, 23);
+            btn_Voltar.Size = new Size(94, 31);
             btn_Voltar.TabIndex = 4;
             btn_Voltar.Text = "Voltar";
             btn_Voltar.UseVisualStyleBackColor = true;
@@ -95,18 +97,19 @@
             // dgv_Categoria
             // 
             dgv_Categoria.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv_Categoria.Location = new Point(23, 22);
+            dgv_Categoria.Location = new Point(26, 29);
+            dgv_Categoria.Margin = new Padding(3, 4, 3, 4);
             dgv_Categoria.Name = "dgv_Categoria";
+            dgv_Categoria.RowHeadersWidth = 51;
             dgv_Categoria.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgv_Categoria.Size = new Size(342, 200);
+            dgv_Categoria.Size = new Size(391, 267);
             dgv_Categoria.TabIndex = 5;
             // 
             // btn_excluir_categoria
             // 
-            btn_excluir_categoria.Location = new Point(151, 245);
-            btn_excluir_categoria.Margin = new Padding(3, 2, 3, 2);
+            btn_excluir_categoria.Location = new Point(173, 327);
             btn_excluir_categoria.Name = "btn_excluir_categoria";
-            btn_excluir_categoria.Size = new Size(82, 22);
+            btn_excluir_categoria.Size = new Size(94, 29);
             btn_excluir_categoria.TabIndex = 1;
             btn_excluir_categoria.Text = "Excluir";
             btn_excluir_categoria.UseVisualStyleBackColor = true;
@@ -116,23 +119,24 @@
             // 
             groupBox_Tabela.Controls.Add(dgv_Categoria);
             groupBox_Tabela.Controls.Add(btn_excluir_categoria);
-            groupBox_Tabela.Location = new Point(90, 240);
+            groupBox_Tabela.Location = new Point(103, 320);
+            groupBox_Tabela.Margin = new Padding(3, 4, 3, 4);
             groupBox_Tabela.Name = "groupBox_Tabela";
-            groupBox_Tabela.Size = new Size(390, 270);
+            groupBox_Tabela.Padding = new Padding(3, 4, 3, 4);
+            groupBox_Tabela.Size = new Size(446, 360);
             groupBox_Tabela.TabIndex = 6;
             groupBox_Tabela.TabStop = false;
             groupBox_Tabela.Text = "Categorias";
             // 
             // FrmCadastrarCategoriacs
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(600, 600);
+            ClientSize = new Size(686, 800);
             Controls.Add(groupBox_Tabela);
             Controls.Add(btn_Voltar);
             Controls.Add(groupBox_nova_categoria);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "FrmCadastrarCategoriacs";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmCadastrarCategoriacs";

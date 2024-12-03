@@ -110,5 +110,85 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Controller
 
         }
 
+        public DataTable AlterContato(int cod_contato, string contato, string telefone, string categoria)
+        {
+            MySqlConnection conexao = null;
+            try
+            {
+                conexao = ConexãoDB.CriarConexao(UserSession.UsuarioSession, UserSession.SenhaSession);
+
+                string sql = $"UPDATE tb_contatos SET contato = '{contato}', telefone = '{telefone}', categoria = '{categoria}'" +
+                             $"WHERE cod_contato = @cod_contato;";
+
+                conexao.Open();
+
+                MySqlCommand comando = new MySqlCommand(sql, conexao);
+
+                comando.Parameters.AddWithValue("@cod_contato", cod_contato);
+                comando.Parameters.AddWithValue("@contato", contato);
+                comando.Parameters.AddWithValue("@telefone", telefone);
+                comando.Parameters.AddWithValue("@categoria", categoria);
+                int linhasAfetadas = comando.ExecuteNonQuery();
+
+                if (linhasAfetadas > 0)
+                {
+                    return new DataTable();
+                }
+
+                else
+                {
+                    return new DataTable();
+                }
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show($"Erro ao alterar contato : {erro.Message}");
+                return new DataTable();
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
+        public DataTable DelContato(int cod_contato)
+        {
+            MySqlConnection conexao = null;
+            try
+            {
+                conexao = ConexãoDB.CriarConexao(UserSession.UsuarioSession, UserSession.UsuarioSession);
+
+                string sql = @"DELETE FROM tb_contatos WHERE cod_contato= @cod_contato;";
+
+                conexao.Open();
+
+                MySqlCommand comando = new MySqlCommand(sql, conexao);
+
+                comando.Parameters.AddWithValue("@cod_contato", cod_contato);
+
+                int linhasAfetadas = comando.ExecuteNonQuery();
+
+                if (linhasAfetadas > 0)
+                {
+                    return new DataTable();
+                }
+
+                else
+                {
+                    return new DataTable();
+                }
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show($"Erro ao deletar contato : {erro.Message}");
+                return new DataTable();
+            }
+
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
     }
 }

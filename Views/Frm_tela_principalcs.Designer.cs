@@ -46,8 +46,8 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { arquivoToolStripMenuItem, eDITARToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(5, 2, 0, 2);
-            menuStrip1.Size = new Size(600, 24);
+            menuStrip1.Padding = new Padding(6, 3, 0, 3);
+            menuStrip1.Size = new Size(686, 30);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -55,13 +55,13 @@
             // 
             arquivoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { sairToolStripMenuItem });
             arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
-            arquivoToolStripMenuItem.Size = new Size(61, 20);
+            arquivoToolStripMenuItem.Size = new Size(75, 24);
             arquivoToolStripMenuItem.Text = "Arquivo";
             // 
             // sairToolStripMenuItem
             // 
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Size = new Size(93, 22);
+            sairToolStripMenuItem.Size = new Size(224, 26);
             sairToolStripMenuItem.Text = "&Sair";
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
@@ -69,27 +69,27 @@
             // 
             eDITARToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { usuáriosToolStripMenuItem, contatosToolStripMenuItem, categoriasToolStripMenuItem });
             eDITARToolStripMenuItem.Name = "eDITARToolStripMenuItem";
-            eDITARToolStripMenuItem.Size = new Size(49, 20);
+            eDITARToolStripMenuItem.Size = new Size(62, 24);
             eDITARToolStripMenuItem.Text = "Editar";
             // 
             // usuáriosToolStripMenuItem
             // 
             usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
-            usuáriosToolStripMenuItem.Size = new Size(180, 22);
+            usuáriosToolStripMenuItem.Size = new Size(163, 26);
             usuáriosToolStripMenuItem.Text = "Usuários";
             usuáriosToolStripMenuItem.Click += usuáriosToolStripMenuItem_Click;
             // 
             // contatosToolStripMenuItem
             // 
             contatosToolStripMenuItem.Name = "contatosToolStripMenuItem";
-            contatosToolStripMenuItem.Size = new Size(180, 22);
+            contatosToolStripMenuItem.Size = new Size(163, 26);
             contatosToolStripMenuItem.Text = "Contatos";
             contatosToolStripMenuItem.Click += contatosToolStripMenuItem_Click;
             // 
             // categoriasToolStripMenuItem
             // 
             categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
-            categoriasToolStripMenuItem.Size = new Size(180, 22);
+            categoriasToolStripMenuItem.Size = new Size(163, 26);
             categoriasToolStripMenuItem.Text = "Categorias";
             categoriasToolStripMenuItem.Click += categoriasToolStripMenuItem_Click;
             // 
@@ -103,22 +103,20 @@
             // lbl_ola_nome
             // 
             lbl_ola_nome.AutoSize = true;
-            lbl_ola_nome.Location = new Point(12, 47);
+            lbl_ola_nome.Location = new Point(14, 63);
             lbl_ola_nome.Name = "lbl_ola_nome";
-            lbl_ola_nome.Size = new Size(38, 15);
+            lbl_ola_nome.Size = new Size(0, 20);
             lbl_ola_nome.TabIndex = 1;
-            lbl_ola_nome.Text = "label1";
             // 
             // Frm_tela_principalcs
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(600, 300);
+            ClientSize = new Size(686, 400);
             Controls.Add(lbl_ola_nome);
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.None;
             MainMenuStrip = menuStrip1;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "Frm_tela_principalcs";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Tela Principal";

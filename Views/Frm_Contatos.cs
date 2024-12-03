@@ -17,6 +17,17 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Views
         {
             InitializeComponent();
             Atualizador_DataGrid();
+
+        }
+
+        private void Frm_Contatos_Load(object sender, EventArgs e)
+        {
+            CategoriaController categoriaController = new CategoriaController();
+
+            DataTable tabela = categoriaController.GetCategorias();
+
+            cbx_Categoria.DataSource = tabela;
+            cbx_Categoria.DisplayMember = "categoria";
         }
 
         private void Atualizador_DataGrid()
@@ -48,7 +59,39 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Views
 
         private void btn_atualizar_contato_Click(object sender, EventArgs e)
         {
-         
+            int cod_contato = Convert.ToInt32(dgv_Contatos.SelectedRows[0].Cells[0].Value);
+
+            string contato = txb_Contato.Text;
+
+            string telefone = txb_Telefone.Text;
+
+            string categoria = cbx_Categoria.Text;
+
+            ContatosController contatosController = new ContatosController();
+
+            contatosController.AlterContato(cod_contato, contato, telefone, categoria);
+
+            Atualizador_DataGrid();
         }
+
+        private void btn_excluir_contato_Click(object sender, EventArgs e)
+        {
+            int codigo = Convert.ToInt32(dgv_Contatos.SelectedRows[0].Cells[0].Value);
+
+            ContatosController contatosController = new ContatosController();
+
+            contatosController.DelContato(codigo);
+
+            Atualizador_DataGrid();
+
+
+        }
+
+        private void btn_Voltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        
     }
 }
