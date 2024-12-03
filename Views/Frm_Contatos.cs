@@ -20,16 +20,6 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Views
 
         }
 
-        private void Frm_Contatos_Load(object sender, EventArgs e)
-        {
-            CategoriaController categoriaController = new CategoriaController();
-
-            DataTable tabela = categoriaController.GetCategorias();
-
-            cbx_Categoria.DataSource = tabela;
-            cbx_Categoria.DisplayMember = "categoria";
-        }
-
         private void Atualizador_DataGrid()
         {
             ContatosController contatosController = new ContatosController();
@@ -92,6 +82,14 @@ namespace Projeto_Agenda_Destruidora_De_Mundos_Do_Alex.Views
             this.Close();
         }
 
-        
+        private void Frm_Contatos_Load_1(object sender, EventArgs e)
+        {
+            CategoriaController categoriaController = new CategoriaController();
+
+            DataTable tabela = categoriaController.GetCategorias();
+
+            cbx_Categoria.DataSource = tabela;
+            cbx_Categoria.DisplayMember = "categoria";
+        }
     }
 }

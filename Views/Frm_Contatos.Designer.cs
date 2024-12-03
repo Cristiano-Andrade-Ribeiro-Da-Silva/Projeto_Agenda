@@ -194,6 +194,7 @@
             Name = "Frm_Contatos";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Frm_Contatos";
+            Load += Frm_Contatos_Load_1;
             groupBox_Tabela.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgv_Contatos).EndInit();
             gbx_menu_edição.ResumeLayout(false);
